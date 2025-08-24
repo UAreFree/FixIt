@@ -1,7 +1,8 @@
 {
   "name": "fixit-core",
-  "version": "0.3.16",
+  "version": "0.4.0-alpha",
   "private": true,
+  "packageManager": "pnpm@10.5.2",
   "description": "Hugo FixIt core theme component source files",
   "keywords": [
     "hugo",
@@ -21,19 +22,28 @@
   "type": "module",
   "scripts": {
     "build": "hugo --source=demo --themesDir ../.. --theme $PWD --gc --minify --logLevel info",
-    "server": "hugo server --source=demo --themesDir ../.. --theme $PWD -D --disableFastRender --navigateToChanged --ignoreCache -O",
-    "server:production": "npm run server -- -e production",
-    "server:docs": "hugo server --source=../fixit-docs -D --disableFastRender --navigateToChanged --ignoreCache -O",
+    "build:test": "hugo --source=test --themesDir ../.. --theme $PWD --gc --minify --logLevel info",
+    "build:vercel": "npm run build && npm run build:test && ./move-public.sh",
+    "preview": "npm run build:vercel && serve public",
+    "dev": "hugo server --source=demo --themesDir ../.. --theme $PWD -D --disableFastRender --navigateToChanged --ignoreCache -O",
+    "test": "hugo server --source=test --themesDir ../.. --theme $PWD -D --disableFastRender --navigateToChanged --ignoreCache -O",
+    "dev:docs": "hugo server --source=../fixit-docs -D --disableFastRender --navigateToChanged --ignoreCache -O",
     "version": "fixit-releaser version --prod",
     "postversion": "git push && git push --tags && npm run release",
     "release": "fixit-releaser changelog",
     "prepare": "husky"
   },
   "devDependencies": {
-    "@hugo-fixit/fixit-releaser": "^1.1.1",
-    "husky": "^9.1.7"
+    "@hugo-fixit/fixit-releaser": "^1.3.2",
+    "husky": "^9.1.7",
+    "serve": "^14.2.4"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "on-headers": ">=1.1.0"
+    }
   }
 }

@@ -1,29 +1,15 @@
 // inline code
 code {
-  padding: 0.2em 0.4em;
-  margin: 0;
-  font-size: $code-font-size;
-  font-family: $code-font-family;
-  color: $code-color;
-  background-color: rgba(175, 184, 193, 0.2);
-  text-decoration: inherit;
-  @include border-radius($global-border-radius);
-  @include overflow-wrap(break-word);
-  @include line-break(auto);
-
-  [data-theme='dark'] & {
-    color: $code-color-dark;
-    background-color: rgba(99, 110, 123, 0.4);
-  }
+  @extend %code;
 }
 
 // indented code
-pre:not(.mermaid[data-processed='true']) {
+pre:not([data-processed]) {
   margin: 0;
   line-height: 1.45em;
   padding: 0.5rem;
   overflow: auto;
-  font-size: $code-font-size;
+  font-size: $code-block-font-size;
   font-family: $code-font-family;
   @include border-radius($global-border-radius);
   @include tab-size(4);
@@ -37,6 +23,7 @@ pre:not(.mermaid[data-processed='true']) {
   code {
     padding: 0;
     background-color: transparent;
+    font-size: inherit;
     @include border-radius(0);
     @include max-content(min-width);
 
@@ -54,7 +41,7 @@ pre:not(.mermaid[data-processed='true']) {
 
 .highlight,
 .gist {
-  font-size: $code-font-size;
+  font-size: $code-block-font-size;
   font-family: $code-font-family;
 
   .table-wrapper {
@@ -95,9 +82,9 @@ pre:not(.mermaid[data-processed='true']) {
 
       // delayed loading table-wrapper
       & + .table-wrapper {
-        max-height: 0;
+        height: 0;
         @include border-radius(0 0 $global-border-radius $global-border-radius);
-        @include details-transition-open;
+        @include transition(height 0.5s ease-out);
       }
 
       [data-theme='dark'] & {
@@ -240,8 +227,7 @@ pre:not(.mermaid[data-processed='true']) {
       }
 
       .table-wrapper {
-        max-height: 100%;
-        @include details-transition-close;
+        height: auto;
       }
 
       .arrow {
@@ -354,6 +340,7 @@ pre:not(.mermaid[data-processed='true']) {
   .gist-meta {
     padding: 0.4rem 0.8rem;
     @include link(false, false);
+    @include border-radius(0 0 $global-border-radius $global-border-radius);
     background-color: darken($code-background-color, 5%);
 
     [data-theme='dark'] & {
@@ -362,12 +349,15 @@ pre:not(.mermaid[data-processed='true']) {
   }
 
   .table-wrapper {
-    .highlight {
-      background-color: $code-background-color;
+    padding-block: 0.25rem;
+    @include border-radius($global-border-radius $global-border-radius 0 0);
+    background-color: $code-background-color;
 
-      [data-theme='dark'] & {
-        background-color: $code-background-color-dark;
-      }
+    [data-theme='dark'] & {
+      background-color: $code-background-color-dark;
+    }
+    .highlight {
+      background-color: transparent;
     }
   }
 

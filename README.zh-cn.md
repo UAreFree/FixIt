@@ -24,10 +24,11 @@
 
 > 它的原型基于 [LoveIt](https://github.com/dillonzq/LoveIt) 主题，[KeepIt](https://github.com/Fastbyte01/KeepIt) 主题和 [LeaveIt](https://github.com/liuzc/LeaveIt) 主题。
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat)](https://github.com/hugo-fixit/FixIt/releases)
-[![Hugo](https://img.shields.io/badge/Hugo-%5E0.141.0-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
-[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat)](/LICENSE)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/hugo-fixit/FixIt)
+[![Build](https://img.shields.io/github/deployments/hugo-fixit/FixIt/Production?style=flat&label=Build&logo=vercel)](https://demo.fixit.lruihao.cn/)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/hugo-fixit/FixIt?style=flat&label=Release&logo=github)](https://github.com/hugo-fixit/FixIt/releases)
+[![Hugo](https://img.shields.io/badge/Hugo-%5E0.147.7-ff4088?style=flat&logo=hugo)](https://gohugo.io/)
+[![License](https://img.shields.io/github/license/hugo-fixit/FixIt?style=flat&label=License)](/LICENSE)
+[![Gitee star of FixIt](https://gitee.com/lruihao/FixIt/badge/star.svg?theme=dark)](https://gitee.com/lruihao/FixIt/stargazers)
 
 ## 即时预览
 
@@ -82,10 +83,6 @@ pnpx fixit-cli create my-blog
 [lruihao-blog]: https://github.com/Lruihao/hugo-blog
 [lruihao-blog:generate]: https://github.com/Lruihao/hugo-blog/generate
 
-### 镜像
-
-Gitee 镜像仓库：<https://gitee.com/lruihao/FixIt>
-
 ## 特色
 
 <details>
@@ -135,12 +132,12 @@ Gitee 镜像仓库：<https://gitee.com/lruihao/FixIt>
 
 ### 扩展功能
 
-- 支持基于 [PostChat](https://ai.tianli0.top/?InviteID=IRE1S88Z) 的 **AI 摘要**、**AI 搜索** 和 **AI 智能客服**
+- 支持基于 [PostChat](https://ai.zhheo.com/console/login?InviteID=85041330) 的 **AI 摘要**、**AI 搜索** 和 **AI 智能客服**
 - 支持**渐进式网页应用**
 - 支持**二级菜单**
 - 支持**内容加密**（页面、局部）
 - 支持**友情链接**的页面模板
-- 支持基于 [algolia](https://www.algolia.com/)、[Fuse.js](https://fusejs.io/)、 **CSE** 或 [PostChat](https://ai.tianli0.top/?InviteID=IRE1S88Z) 的**搜索**
+- 支持基于 [algolia](https://www.algolia.com/)、[Fuse.js](https://fusejs.io/)、 **CSE** 或 [PostChat](https://ai.zhheo.com/console/login?InviteID=85041330) 的**搜索**
 - 支持基于 [Google](https://programmablesearchengine.google.com/) 的**自定义搜索引擎 (CSE)**
 - 支持 **Twemoji**
 - 支持**代码高亮**
@@ -149,7 +146,7 @@ Gitee 镜像仓库：<https://gitee.com/lruihao/FixIt>
 - 支持 **[Font Awesome](https://fontawesome.com/) 图标**的扩展 Markdown 语法
 - 支持**上标注释**的扩展 Markdown 语法
 - 支持**分数**的扩展 Markdown 语法
-- 支持基于 [KaTeX](https://katex.org/) 的**数学公式**
+- 支持基于 [KaTeX](https://katex.org/) 或 [MathJax](https://www.mathjax.org) 的**数学公式**
 - 支持基于 [mermaid](https://github.com/knsv/mermaid) 的**图表** 代码块扩展语法和 shortcode
 - 支持基于 [ECharts](https://echarts.apache.org/) 的**交互式数据可视化** 代码块扩展语法和 shortcode
 - 支持 **Timeline** 的代码块扩展语法和 shortcode
@@ -204,7 +201,7 @@ FixIt 主题旨在在**简洁性**和**可扩展性**之间取得平衡。为此
 - [fixit-bundle](https://github.com/hugo-fixit/fixit-bundle)\
   🌲 Bundles the FixIt core theme and all hugo-fixit components into a single component.
 - [cmpt-flyfish](https://github.com/hugo-fixit/cmpt-flyfish)\
-  🐟 一个 canvas 实现的小鱼游动动画效果。
+  🐟 A canvas implemented animation effect of small fish swimming.
 - [cmpt-mdevtools](https://github.com/hugo-fixit/cmpt-mdevtools)\
   Mobile devtools component powered by vConsole and eruda.
 - [cmpt-translate](https://github.com/hugo-fixit/cmpt-translate)\
@@ -218,9 +215,11 @@ FixIt 主题旨在在**简洁性**和**可扩展性**之间取得平衡。为此
 - [shortcode-asciinema](https://github.com/hugo-fixit/shortcode-asciinema)\
   A Hugo theme component with asciinema-embed shortcode.
 - [shortcode-caniuse](https://github.com/hugo-fixit/shortcode-caniuse)\
-  一个含有 caniuse shortcode 的 Hugo 主题组件。
+  A Hugo theme component with caniuse shortcode.
 - [shortcode-docs-bookmark](https://github.com/hugo-fixit/shortcode-docs-bookmark)\
   🔖 Embed bookmark of FixIt Docs.
+- [shortcode-missing-translation](https://github.com/hugo-fixit/shortcode-missing-translation)\
+  A Hugo theme component with missing-translation shortcode.
 - [shortcode-mmt-netease](https://github.com/hugo-fixit/shortcode-mmt-netease)\
   🎶 A Hugo theme component with a NetEase Cloud random comment shortcode.
 - [shortcode-rewards](https://github.com/hugo-fixit/shortcode-rewards)\
@@ -277,6 +276,7 @@ FixIt 主题旨在在**简洁性**和**可扩展性**之间取得平衡。为此
 - [Sharer.js](https://github.com/ellisonleao/sharer.js)
 - [TypeIt](https://typeitjs.com/)
 - [KaTeX](https://katex.org/)
+- [MathJax](https://www.mathjax.org)
 - [mermaid](https://github.com/mermaid-js/mermaid)
 - [ECharts](https://echarts.apache.org/)
 - [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js)
